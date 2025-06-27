@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE population SYSTEM "http://www.matsim.org/files/dtd/population_v6.dtd">
+<population>
+    <person id="1">
+        <attributes>
+            <attribute name="vehicles" class="org.matsim.vehicles.PersonVehicles">{"car":"1"}</attribute>
+        </attributes>
+        <plan score="0" selected="yes">
+            <activity type="h" link="1" x="-25000.0" y="0.0" end_time="06:00:00" />
+            <leg mode="car" dep_time="06:00:00" trav_time="00:01:00">
+                <attributes>
+                    <attribute name="routingMode" class="java.lang.String">car</attribute>
+                </attributes>
+                <route type="links" start_link="1" end_link="20" trav_time="00:01:00" distance="25000.0" vehicleRefId="1_car">1 6 15 20</route>
+            </leg>
+            <activity type="w" link="20" x="3456.0" y="4242.0" />
+        </plan>
+    </person>
+</population>
