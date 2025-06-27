@@ -1,0 +1,26 @@
+modules:
+  protofiles:
+    type: ProtoFiles
+    network: ./test_output/simulation/equil_gen_main/equil-network.binpb
+    population: ./test_output/simulation/equil_gen_main/equil-plan.binpb
+    vehicles: ./test_output/simulation/equil_gen_main/equil-vehicles.binpb
+    ids: ./test_output/simulation/equil_gen_main/ids.binpb
+  partitioning:
+    type: Partitioning
+    num_parts: 1
+    method: !Metis
+      vertex_weight:
+        - Constant
+  output:
+    type: Output
+    output_dir: ./test_output/simulation/equil_gen_main
+  routing:
+    type: Routing
+    mode: UsePlans
+  simulation:
+    type: Simulation
+    start_time: 0
+    end_time: 86400
+    sample_size: 1.0
+    stuck_threshold: 1000
+    main_modes: ["car"]
